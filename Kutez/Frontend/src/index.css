@@ -1,0 +1,223 @@
+/* Font Yükleme */
+@font-face {
+    font-family: 'Avenir';
+    src: url('./fonts/Avenir/Avenir-Book.woff2') format('woff2'),
+         url('./fonts/Avenir/Avenir-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'),
+         url('./fonts/Montserrat/Montserrat-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Genel Ayarlar */
+body {
+    font-family: 'Avenir', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 3rem;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 300;
+    color: #444;
+}
+
+/* Ürünler Wrapper (Scroll ve Oklar) */
+.products-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Ürünler Konteyneri */
+#products-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 50px;
+    padding: 20px;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+#products-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+#products-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+/* Ok Butonları */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #444;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-btn:hover {
+    color: #000;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+
+/* Ürün Kartları */
+.product {
+    flex: 0 0 auto;
+    width: 240px;
+    text-align: left;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    display: block;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 30px;
+    margin: 0 auto;
+    padding: 0px;
+  
+}
+
+.product h2 {
+    font-family: 'Avenir', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 10px 0;
+    font-family: 'Avenir', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+}
+
+/* Renk Seçici */
+.color-options {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.color-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-btn[data-color="yellow"] {
+    background-color: #e6ca97;
+}
+
+.color-btn[data-color="rose"] {
+    background-color: #e1a4a9;
+}
+
+.color-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #ffffff; /* Beyaz boşluk için border */
+    background-clip: content-box; /* Arka planı buton içine sınırlandırır */
+    padding: 3px; /* İçerik ile çerçeve arasındaki boşluk */
+    margin: 0 3%; /* Butonlar arasındaki boşluk */
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0;
+}
+
+.color-btn.active {
+    border: 1px solid #000000; /* Siyah çerçeve */
+    box-shadow: 0 0 0 2px #ffffff; /* Siyah çerçeve ile renkli buton arasında beyaz boşluk */
+}
+
+
+
+
+/* Rating Section */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+.rating-text {
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+}
+
+.star {
+    font-size: 15px;
+}
+
+.star.full {
+    color: #ffc107;
+}
+
+.star.half {
+    position: relative;
+    color: #ddd;
+}
+
+.star.half::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #ffc107;
+}
+
+.star.empty {
+    color: #ddd;
+}
