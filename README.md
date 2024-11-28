@@ -19,4 +19,27 @@ This project demonstrates full-stack development skills, combining a dynamic bac
 
 Looking ahead, this application is a great foundation for further improvements, such as adding user authentication, detailed product pages, or integrating additional APIs to extend its functionality. It’s designed to be scalable, easy to maintain, and a solid example of modern web development.
 
+Note:
+While running the project, make sure that the file structure is as follows
+-Backend-
+App.py
+Product.json
+requirements.txt
 
+-Frontend-
+*src*
+app.js
+index.css
+fonts
+*public*
+index.html
+
+Note: Use these commands to run the project via vs code 
+first open the app.py terminal than,
+cd Backend
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt
+flask run
+cd Frontend
+then go to index.html and open with live server.
