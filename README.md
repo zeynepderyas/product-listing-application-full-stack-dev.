@@ -21,6 +21,7 @@ Looking ahead, this application is a great foundation for further improvements, 
 
 Note:
 While running the project, make sure that the file structure is as follows
+--Kutez--
 -Backend-
 App.py
 Product.json
@@ -43,3 +44,9 @@ pip install -r requirements.txt
 flask run
 cd Frontend
 then go to index.html and open with live server.
+
+Note: You can see the extracted products by pasting this link into the search engine, it shows that the backend is working correctly.
+http://127.0.0.1:5000/products
+
+
+
