@@ -3,7 +3,7 @@ A full-stack product listing app with a Flask backend and a responsive HTML/CSS/
 
 
 
-#Product Listing Application
+
 This is a simple yet comprehensive product listing application that showcases how backend and frontend technologies work together. It features a dynamic and user-friendly interface that pulls product data from a backend API and presents it in an engaging way. Key functionalities include real-time price calculations, product filtering, and interactive elements like a color picker and carousel navigation.
 
 The backend is built with Flask, offering a RESTful API to serve product data stored in a JSON file. Product prices are calculated dynamically based on their weight, popularity score, and the current gold price, which is fetched from a real-time API. Flask-CORS ensures smooth communication between the backend and frontend.
